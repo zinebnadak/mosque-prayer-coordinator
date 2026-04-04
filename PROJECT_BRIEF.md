@@ -2,7 +2,7 @@
 
 > Built following my [Developer Handbook](https://github.com/zinebnadak/zinebnadak-developer-handbook) — my personal engineering process for planning, building, and documenting projects.
 
-## 1. Project Selection
+## 1. Project Selection Reasoning 
 
 > This project was selected because it solves a real, observable problem for a real group of people who are actively using a workaround today.
 
@@ -19,7 +19,7 @@ Yes. The core functionality is a single screen showing today's prayer times with
 Yes. The group is real, active, and currently experiencing this limitation daily.
 
 
-## 2. Project Format 
+## 2. Chosen Format and why
 
 **Chosen format:** Mobile-first web app
 
@@ -30,8 +30,51 @@ and tap) This format gets to a working product fastest with the least complexity
 
 ## 3. Development Process
 
-**Approach:** Using GitHub projects (Lean Agile + Kanban board)
+**Approach:** Using GitHub projects (Lean Agile + Kanban)
 
-- Using GitHub projects: GitHub Issues I create (eg. things I want tp fix like tasks, bugs, features) in my repo will automatically appear as cards on my Kanban board.
-- I will ship in one week, then iterate based on real feedback.
+- Kanban board for task management → [View Board](https://github.com/users/zinebnadak/projects/3)
+> Note: GitHub Issues I create (eg. things I want tp fix like tasks, bugs, features) in my repo will automatically appear as cards on my Kanban board. 
+- Working MVP in 7 days, then iterate based on real feedback.
 - Small, meaningful commits throughout
+
+
+## 4. Phase timeline & statuses
+
+Full process defined in my [Developer Handbook](https://github.com/zinebnadak/zinebnadak-developer-handbook)
+Below is this project's specific plan.
+
+### Phase 0 — Discovery `Day 1`
+Output: PROJECT_BRIEF.md
+Status: DONE! 
+
+### Phase 1 — Scope `Day 1–2`
+Output: Scope section added to PROJECT_BRIEF.md
+Status: DONE!
+
+### Phase 2 — Design `Day 2–3`
+Output: /docs folder with exported images
+
+### Phase 3 — Setup `Day 3`
+Output: Live (empty) deployment + repo visible on GitHub
+
+### Phase 4 — Build MVP `Day 3–10`
+Output: Working MVP on a live URL
+
+### Phase 5 — Real User Testing `Day 7–12`
+Output: Feedback list, bug list
+
+### Phase 6 — Ship & Polish `Day 10–14`
+Output: Portfolio-ready project
+
+## 5. Scope — what is and isn't being built
+
+## 6. Tech stack decisions
+After MVP — What Comes Next?
+
+## 7. After MVP plan - Decide if the project is Done according to [My Developer Handbook](https://github.com/zinebnadak/zinebnadak-developer-handbook)
+
+
+
+
+
+
