@@ -68,11 +68,36 @@ Output: Portfolio-ready project
 
 ## 5. Scope — what is and isn't being built
 
-## 6. Tech stack decisions
-After MVP — What Comes Next?
+**Building:**
+- Display today's 5 prayer times (via Aladhan API)
+- "Attending" button per prayer
+- Live attendee count per prayer
+- Auto-reset attendance after each prayer passes
 
-## 7. After MVP plan - Decide if the project is Done according to [My Developer Handbook](https://github.com/zinebnadak/zinebnadak-developer-handbook)
+**NOT building (MVP):**
+- User authentication / login
+- Push notifications
+- Leaderboard / points system
+- WhatsApp integration
 
+## 6. Tech Stack Decision
+
+| Layer | Tool |
+|---|---|
+| Frontend | Next.js (mobile-first) |
+| Styling | Tailwind CSS |
+| Backend / Database | Supabase (PostgreSQL + Realtime) |
+| Prayer Times | Aladhan API (free, no key needed) |
+| Deployment | Vercel |
+| Task Management | GitHub Projects (Kanban) |
+
+## 7. After MVP Plan
+
+Full criteria in [My Developer Handbook](https://github.com/zinebnadak/zinebnadak-developer-handbook).
+
+- Week 3 — fix bugs, improve UX based on real usage
+- Week 4 — add 1–2 high impact features from user feedback
+- Week 6+ — notifications, WhatsApp integration (optional)
 
 
 
