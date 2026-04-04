@@ -53,12 +53,13 @@ Status: DONE!
 
 ### Phase 2 — Design `Day 2–3`
 Output: /docs folder with exported images
+Status: 
 
 ### Phase 3 — Setup `Day 3`
 Output: Live (empty) deployment + repo visible on GitHub
 
 ### Phase 4 — Build MVP `Day 3–10`
-Output: Working MVP on a live URL
+Output: Working MVP on a live URL, start by planning on Kanban
 
 ### Phase 5 — Real User Testing `Day 7–12`
 Output: Feedback list, bug list
@@ -71,8 +72,8 @@ Output: Portfolio-ready project
 **Building:**
 - Display today's 5 prayer times (via Aladhan API)
 - "Attending" button per prayer
-- Live attendee count per prayer
-- Auto-reset attendance after each prayer passes
+- Live attendee count per latest upcoming
+- Auto display new latest upcoming prayer after each prayer passes
 
 **NOT building (MVP):**
 - User authentication / login
