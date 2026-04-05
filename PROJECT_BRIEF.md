@@ -67,12 +67,16 @@ Output: Feedback list, bug list
 ### Phase 6 — Ship & Polish `Day 10–14`
 Output: Portfolio-ready project
 
+
+
+
 ## 5. Scope — what is and isn't being built
 
 **Building:**
 - Display today's 5 prayer times (via Aladhan API)
-- "Attending" button per prayer
-- Live attendee count per latest upcoming
+- The upcoming prayer highlighted and at the top.
+- "Attending" button and Live attendee COUNT on the upcoming prayer, 
+- Below with names displayed in order 
 - Auto display new latest upcoming prayer after each prayer passes
 
 **NOT building (MVP):**
