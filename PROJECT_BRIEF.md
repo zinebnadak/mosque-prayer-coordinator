@@ -56,8 +56,8 @@ Output: /docs folder with exported images
 Status: DONE!
 
 ### Phase 3 — Setup `Day 3`
-Output: Live (empty) deployment + repo visible on GitHub
-Status: WORKING!
+Output: Live (empty) URL deployment + repo visible on GitHub
+Status: DONE!
 
 ### Phase 4 — Build MVP `Day 3–10`
 Output: Working MVP on a live URL, start by planning on Kanban
