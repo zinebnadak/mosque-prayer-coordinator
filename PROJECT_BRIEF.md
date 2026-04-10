@@ -60,7 +60,7 @@ Output: Live (empty) URL deployment + repo visible on GitHub
 Status: DONE!
 
 ### Phase 4 — Build MVP `Day 3–10`
-Output: Working MVP on a live URL, start by planning on Kanban
+Output: DONE!
 
 ### Phase 5 — Real User Testing `Day 7–12`
 Output: Feedback list, bug list
