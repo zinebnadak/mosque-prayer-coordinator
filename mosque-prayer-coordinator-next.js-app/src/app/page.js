@@ -175,14 +175,15 @@ export default function Home() {
     return (
       <main
         className="flex flex-col items-center justify-center min-h-screen p-6 text-center"
+        style={{ backgroundColor: 'rgba(34,64,77,0.88)' }}
         onClick={() => setScreen('home')}
       >
-        <h1 className="text-2xl font-bold mb-2">
+        <h1 className="text-2xl font-bold mb-2" style={{ color: '#F0E6D3' }}>
           Assalamu Alaykum {savedName}!
         </h1>
-        <p className="text-gray-500">"Whoever goes to the masjid, Allah prepares for him a place in Paradise."</p>
-        <p className="text-gray-500 mb-6"> — Prophet Muhammad ﷺ (Bukhari & Muslim)</p>
-        <p className="text-sm text-gray-400 mt-8">Tap to continue</p>
+        <p className="mb-1" style={{ color: '#F0E6D3' }}>"Whoever goes to the masjid, Allah prepares for him a place in Paradise."</p>
+        <p className="mb-6" style={{ color: '#F0E6D3' }}> — Prophet Muhammad ﷺ (Bukhari & Muslim)</p>
+        <p className="text-sm mt-8" style={{ color: 'rgba(240,230,211,0.45)' }}>Tap to continue</p>
       </main>
     )
   }
@@ -190,14 +191,14 @@ export default function Home() {
   // Home screen — shows prayer times
   if (savedName && screen === 'home') {
     return (
-      <main className="flex flex-col min-h-screen p-6">
+      <main className="flex flex-col min-h-screen p-6" style={{ backgroundColor: 'rgba(34,64,77,0.88)' }}>
         <p className="text-center text-5xl mb-2">🕌</p>
-        <h1 className="text-xl font-bold mb-4 text-center">Today&apos;s Prayers</h1>
+        <h1 className="text-xl font-bold mb-4 text-center" style={{ color: '#F0E6D3' }}>Today&apos;s Prayers</h1>
         <div className="w-full max-w-sm mx-auto">
 
           <div className="text-center mb-6">
-            <p className="text-sm text-gray-500">Mariehamn, Åland</p>
-            <p className="text-sm text-gray-500">{todayDate}</p>
+            <p className="text-sm" style={{ color: 'rgba(240,230,211,0.45)' }}>Mariehamn, Åland</p>
+            <p className="text-sm" style={{ color: 'rgba(240,230,211,0.45)' }}>{todayDate}</p>
           </div>
 
           {/* All prayers in fixed order — upcoming one is highlighted */}
@@ -206,31 +207,30 @@ export default function Home() {
 
             if (isUpcoming) {
               return (
-                <div key={prayer.name} className="bg-green-700 text-white rounded-2xl px-4 py-5 mb-4">
-                  <p className="text-xs uppercase tracking-wide mb-1 opacity-70">Next Prayer</p>
+                <div key={prayer.name} className="rounded-2xl px-4 py-5 mb-4" style={{ backgroundColor: '#1E6A70' }}>
+                  <p className="text-xs uppercase tracking-wide mb-1" style={{ color: 'rgba(240,230,211,0.45)' }}>Next Prayer</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-xl font-bold">{prayer.name}</span>
-                    <span className="text-xl">{prayer.time}</span>
+                    <span className="text-xl font-bold" style={{ color: '#F0E6D3' }}>{prayer.name}</span>
+                    <span className="text-xl font-semibold" style={{ color: 'rgba(240,230,211,0.45)' }}>{prayer.time}</span>
                   </div>
 
                   <button
                     onClick={handleAttending}
-                    className={`w-full rounded-xl py-2 mt-3 font-medium ${
-                      userAttending
-                        ? 'bg-red-100 text-red-700'
-                        : 'bg-white text-green-700'
-                    }`}
+                    className="w-full rounded-xl py-2 mt-3 font-medium"
+                    style={userAttending
+                      ? { backgroundColor: '#22404D', color: '#F0E6D3', border: '1px solid #F0E6D3' }
+                      : { backgroundColor: '#F0E6D3', color: '#1A3540' }
+                    }
                   >
                     {userAttending ? 'Cancel' : 'Attending'}
                   </button>
 
-
                   {attendance.length > 0 && (
                     <div className="mt-3 text-sm">
-                      <p className="opacity-70 mb-1">👥 {attendance.length} attending</p>
+                      <p className="mb-1" style={{ color: 'rgba(240,230,211,0.45)' }}>👥 {attendance.length} attending</p>
                       {attendance.map((record) => (
-                        <p key={record.id} className="opacity-90">
-                          {record.users.name} — confirmed at {new Date(record.created_at + 'Z').toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Helsinki' })} 
+                        <p key={record.id} style={{ color: '#F0E6D3' }}>
+                          {record.users.name} — confirmed at {new Date(record.created_at + 'Z').toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Helsinki' })}
                         </p>
                       ))}
                     </div>
@@ -240,15 +240,15 @@ export default function Home() {
             }
 
             return (
-              <div key={prayer.name} className="flex justify-between bg-green-50 rounded-xl px-4 py-3 mb-2">
-                <span className="font-medium">{prayer.name}</span>
-                <span className="text-gray-600">{prayer.time}</span>
+              <div key={prayer.name} className="flex justify-between rounded-xl px-4 py-3 mb-2" style={{ backgroundColor: 'rgba(240,230,211,0.07)' }}>
+                <span className="font-medium" style={{ color: '#F0E6D3' }}>{prayer.name}</span>
+                <span style={{ color: 'rgba(240,230,211,0.45)' }}>{prayer.time}</span>
               </div>
             )
           })}
 
           {!upcomingPrayer && (
-            <p className="text-center text-gray-500 my-4">No prayers left for today!</p>
+            <p className="text-center my-4" style={{ color: 'rgba(240,230,211,0.45)' }}>No prayers left for today!</p>
           )}
 
         </div>
@@ -258,9 +258,9 @@ export default function Home() {
 
   // Name entry screen — shown if no name is saved
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-6">
-      <div className="bg-green-50 rounded-2xl shadow-md p-8 w-full max-w-sm">
-        <h1 className="text-xl font-bold mb-6 text-center">
+    <main className="flex flex-col items-center justify-center min-h-screen p-6" style={{ backgroundColor: 'rgba(34,64,77,0.88)' }}>
+      <div className="rounded-2xl shadow-md p-8 w-full max-w-sm" style={{ backgroundColor: '#22404D' }}>
+        <h1 className="text-xl font-bold mb-6 text-center" style={{ color: '#F0E6D3' }}>
           Please enter your name
         </h1>
         <input
@@ -268,11 +268,13 @@ export default function Home() {
           placeholder="Your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg px-4 py-3 mb-4 text-base"
+          className="w-full rounded-lg px-4 py-3 mb-4 text-base"
+          style={{ backgroundColor: 'rgba(238,244,245,0.07)', border: '1px solid #F0E6D3', color: '#F0E6D3' }}
         />
         <button
           onClick={handleSubmit}
-          className="w-full bg-black text-white rounded-lg px-4 py-3 text-base font-medium"
+          className="w-full rounded-lg px-4 py-3 text-base font-medium"
+          style={{ backgroundColor: '#F0E6D3', color: '#1A3540' }}
         >
           Continue
         </button>

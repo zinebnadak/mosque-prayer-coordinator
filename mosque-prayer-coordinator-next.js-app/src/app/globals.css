@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary */
+  --deep-arctic:   #1A3540;
+  --dark-teal:     #22404D;
+
+  /* Secondary */
+  --marble-cream:  #F0E6D3;
+  --soft-cream:    rgba(240, 230, 211, 0.45);
+
+  /* Accent */
+  --teal-depth:    #1E6A70;
 }
 
 @theme inline {
@@ -12,15 +20,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background-color: #f0fdf4;  /* very light green = green-50 in Tailwind */
-  color: #000000;
+  background-color: #1A3540;  /* Deep Arctic — swap for url('/mosque.jpg') when you add your photo */
+  /* background-image: url('/mosque.jpg');  ← uncomment when you add your photo */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #F0E6D3;
   font-family: Arial, Helvetica, sans-serif;
 }
