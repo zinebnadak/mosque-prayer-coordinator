@@ -175,7 +175,7 @@ export default function Home() {
     return (
       <main
         className="flex flex-col items-center justify-center min-h-screen p-6 text-center"
-        style={{ backgroundColor: 'rgba(34,64,77,0.88)' }}
+        style={{ backgroundColor: 'transparent' }}
         onClick={() => setScreen('home')}
       >
         <h1 className="text-2xl font-bold mb-2" style={{ color: '#F0E6D3' }}>
@@ -191,7 +191,7 @@ export default function Home() {
   // Home screen — shows prayer times
   if (savedName && screen === 'home') {
     return (
-      <main className="flex flex-col min-h-screen p-6" style={{ backgroundColor: 'rgba(34,64,77,0.88)' }}>
+      <main className="flex flex-col min-h-screen p-6" style={{ backgroundColor: 'transparent' }}>
         <p className="text-center text-5xl mb-2">🕌</p>
         <h1 className="text-xl font-bold mb-4 text-center" style={{ color: '#F0E6D3' }}>Today&apos;s Prayers</h1>
         <div className="w-full max-w-sm mx-auto">
@@ -207,7 +207,7 @@ export default function Home() {
 
             if (isUpcoming) {
               return (
-                <div key={prayer.name} className="rounded-2xl px-4 py-5 mb-4" style={{ backgroundColor: '#1E6A70' }}>
+                <div key={prayer.name} className="rounded-2xl px-4 py-5 mb-4" style={{ backgroundColor: '#1E6A70', boxShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
                   <p className="text-xs uppercase tracking-wide mb-1" style={{ color: 'rgba(240,230,211,0.45)' }}>Next Prayer</p>
                   <div className="flex justify-between items-center">
                     <span className="text-xl font-bold" style={{ color: '#F0E6D3' }}>{prayer.name}</span>
@@ -240,7 +240,7 @@ export default function Home() {
             }
 
             return (
-              <div key={prayer.name} className="flex justify-between rounded-xl px-4 py-3 mb-2" style={{ backgroundColor: 'rgba(240,230,211,0.07)' }}>
+              <div key={prayer.name} className="flex justify-between rounded-xl px-4 py-3 mb-2" style={{ backgroundColor: 'rgba(34,64,77,0.82)' }}>
                 <span className="font-medium" style={{ color: '#F0E6D3' }}>{prayer.name}</span>
                 <span style={{ color: 'rgba(240,230,211,0.45)' }}>{prayer.time}</span>
               </div>
@@ -258,7 +258,7 @@ export default function Home() {
 
   // Name entry screen — shown if no name is saved
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-6" style={{ backgroundColor: 'rgba(34,64,77,0.88)' }}>
+    <main className="flex flex-col items-center justify-center min-h-screen p-6" style={{ backgroundColor: 'transparent' }}>
       <div className="rounded-2xl shadow-md p-8 w-full max-w-sm" style={{ backgroundColor: '#22404D' }}>
         <h1 className="text-xl font-bold mb-6 text-center" style={{ color: '#F0E6D3' }}>
           Please enter your name
