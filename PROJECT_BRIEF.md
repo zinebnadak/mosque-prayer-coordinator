@@ -101,9 +101,7 @@ Output: Portfolio-ready project
 
 Full criteria in [My Developer Handbook](https://github.com/zinebnadak/zinebnadak-developer-handbook).
 
-- Week 3 — fix bugs, improve UX based on real usage
-- Week 4 — add 1–2 high impact features from user feedback
-- Week 6+ — notifications, WhatsApp integration (optional)
+- Week 2+ — fix bugs, improve UX based on real usage & add 1–2 high impact features from user feedback & notifications, WhatsApp integration (optional)
 
 
 
