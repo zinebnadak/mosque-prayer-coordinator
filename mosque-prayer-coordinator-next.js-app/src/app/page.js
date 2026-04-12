@@ -19,6 +19,7 @@ everything lives inside Home(), in this order:
 
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
+import FeedbackForm from '@/components/FeedbackForm'
 
 export default function Home() {
   const [name, setName] = useState('')
@@ -178,12 +179,14 @@ export default function Home() {
         style={{ backgroundColor: 'transparent' }}
         onClick={() => setScreen('home')}
       >
-        <h1 className="text-2xl font-bold mb-2" style={{ color: '#F0E6D3' }}>
-          Assalamu Alaykum {savedName}!
-        </h1>
-        <p className="mb-1" style={{ color: '#F0E6D3' }}>"Whoever goes to the masjid, Allah prepares for him a place in Paradise."</p>
-        <p className="mb-6" style={{ color: '#F0E6D3' }}> — Prophet Muhammad ﷺ (Bukhari & Muslim)</p>
-        <p className="text-sm mt-8" style={{ color: 'rgba(240,230,211,0.45)' }}>Tap to continue</p>
+        <div className="w-full max-w-sm rounded-3xl px-6 py-10" style={{ backgroundColor: 'rgba(40, 20, 8, 0.85)' }}>
+          <h1 className="text-2xl font-bold mb-2" style={{ color: '#F0E6D3' }}>
+            Assalamu Alaykum {savedName}!
+          </h1>
+          <p className="mb-1" style={{ color: '#F0E6D3' }}>"Whoever goes to the masjid, Allah prepares for him a place in Paradise."</p>
+          <p className="mb-6" style={{ color: '#F0E6D3' }}> — Prophet Muhammad ﷺ (Bukhari & Muslim)</p>
+          <p className="text-sm mt-8" style={{ color: 'rgba(240,230,211,0.45)' }}>Tap to continue</p>
+        </div>
       </main>
     )
   }
@@ -191,10 +194,11 @@ export default function Home() {
   // Home screen — shows prayer times
   if (savedName && screen === 'home') {
     return (
-      <main className="flex flex-col min-h-screen p-6" style={{ backgroundColor: 'transparent' }}>
-        <p className="text-center text-5xl mb-2">🕌</p>
-        <h1 className="text-xl font-bold mb-4 text-center" style={{ color: '#F0E6D3' }}>Today&apos;s Prayers</h1>
-        <div className="w-full max-w-sm mx-auto">
+      <main className="flex flex-col items-center min-h-screen py-10 px-4" style={{ backgroundColor: 'transparent' }}>
+        <div className="w-full max-w-sm rounded-3xl px-6 pt-6 pb-6" style={{ backgroundColor: 'rgba(40, 20, 8, 0.85)' }}>
+
+          <p className="text-center text-5xl mb-2">🕌</p>
+          <h1 className="text-xl font-bold mb-4 text-center" style={{ color: '#F0E6D3' }}>Today&apos;s Prayers</h1>
 
           <div className="text-center mb-6">
             <p className="text-sm" style={{ color: 'rgba(240,230,211,0.45)' }}>Mariehamn, Åland</p>
@@ -207,19 +211,19 @@ export default function Home() {
 
             if (isUpcoming) {
               return (
-                <div key={prayer.name} className="rounded-2xl px-4 py-5 mb-4" style={{ backgroundColor: '#3D2C1E', boxShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
-                  <p className="text-xs uppercase tracking-wide mb-1" style={{ color: 'rgba(240,230,211,0.6)' }}>Next Prayer</p>
+                <div key={prayer.name} className="rounded-2xl px-4 py-5 mb-4" style={{ backgroundColor: '#f5ead8', boxShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
+                  <p className="text-xs uppercase tracking-wide mb-1" style={{ color: 'rgba(59,32,16,0.6)' }}>Next Prayer</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-xl font-bold" style={{ color: '#F0E6D3' }}>{prayer.name}</span>
-                    <span className="text-xl font-semibold" style={{ color: 'rgba(240,230,211,0.45)' }}>{prayer.time}</span>
+                    <span className="text-xl font-bold" style={{ color: '#3b2010' }}>{prayer.name}</span>
+                    <span className="text-xl font-semibold" style={{ color: 'rgba(59,32,16,0.6)' }}>{prayer.time}</span>
                   </div>
 
                   <button
                     onClick={handleAttending}
                     className="w-full rounded-xl py-2 mt-3 font-medium"
                     style={userAttending
-                      ? { backgroundColor: 'rgba(240,230,211,0.12)', color: '#F0E6D3', border: '1px solid rgba(240,230,211,0.4)' }
-                      : { backgroundColor: '#C4956A', color: '#2E2016' }
+                      ? { backgroundColor: 'rgba(59,32,16,0.12)', color: '#3b2010', border: '1px solid rgba(59,32,16,0.4)' }
+                      : { backgroundColor: '#c8935a', color: '#f5ead8' }
                     }
                   >
                     {userAttending ? 'Cancel' : 'Attending'}
@@ -227,9 +231,9 @@ export default function Home() {
 
                   {attendance.length > 0 && (
                     <div className="mt-3 text-sm">
-                      <p className="mb-1" style={{ color: 'rgba(240,230,211,0.45)' }}>👥 {attendance.length} attending</p>
+                      <p className="mb-1" style={{ color: 'rgba(59,32,16,0.6)' }}>{attendance.length} attending</p>
                       {attendance.map((record) => (
-                        <p key={record.id} style={{ color: '#F0E6D3' }}>
+                        <p key={record.id} style={{ color: '#3b2010' }}>
                           {record.users.name} — confirmed at {new Date(record.created_at + 'Z').toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Helsinki' })}
                         </p>
                       ))}
@@ -240,9 +244,9 @@ export default function Home() {
             }
 
             return (
-              <div key={prayer.name} className="flex justify-between rounded-xl px-4 py-3 mb-2" style={{ backgroundColor: '#F0E6D3' }}>
-                <span className="font-medium" style={{ color: '#3D2C1E' }}>{prayer.name}</span>
-                <span style={{ color: '#3D2C1E' }}>{prayer.time}</span>
+              <div key={prayer.name} className="flex justify-between rounded-xl px-4 py-3 mb-2" style={{ backgroundColor: '#3b2010' }}>
+                <span className="font-medium" style={{ color: '#f5ead8' }}>{prayer.name}</span>
+                <span style={{ color: '#f5ead8' }}>{prayer.time}</span>
               </div>
             )
           })}
@@ -251,6 +255,10 @@ export default function Home() {
             <p className="text-center my-4" style={{ color: 'rgba(240,230,211,0.45)' }}>No prayers left for today!</p>
           )}
 
+        </div>
+
+        <div className="w-full max-w-sm rounded-3xl px-6 py-4 mt-6" style={{ backgroundColor: 'rgba(40, 20, 8, 0.85)' }}>
+          <FeedbackForm />
         </div>
       </main>
     )
