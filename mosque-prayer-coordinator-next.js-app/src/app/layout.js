@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,7 +23,21 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <div style={{
+          position: 'fixed',
+          bottom: '14px',
+          right: '16px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '6px',
+          opacity: 0.5,
+        }}>
+          <span style={{ fontSize: '13px', color: '#F0E6D3', letterSpacing: '0.02em' }}>Made by</span>
+          <Image src="/nadak-logo.png" alt="nadak" height={26} width={90} style={{ filter: 'invert(1) brightness(2)', objectFit: 'contain' }} />
+        </div>
+      </body>
     </html>
   );
 }

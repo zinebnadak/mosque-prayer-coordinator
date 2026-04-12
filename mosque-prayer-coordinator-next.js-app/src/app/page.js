@@ -207,8 +207,8 @@ export default function Home() {
 
             if (isUpcoming) {
               return (
-                <div key={prayer.name} className="rounded-2xl px-4 py-5 mb-4" style={{ backgroundColor: '#1E6A70', boxShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
-                  <p className="text-xs uppercase tracking-wide mb-1" style={{ color: 'rgba(240,230,211,0.45)' }}>Next Prayer</p>
+                <div key={prayer.name} className="rounded-2xl px-4 py-5 mb-4" style={{ backgroundColor: '#3D2C1E', boxShadow: '0 4px 16px rgba(0,0,0,0.4)' }}>
+                  <p className="text-xs uppercase tracking-wide mb-1" style={{ color: 'rgba(240,230,211,0.6)' }}>Next Prayer</p>
                   <div className="flex justify-between items-center">
                     <span className="text-xl font-bold" style={{ color: '#F0E6D3' }}>{prayer.name}</span>
                     <span className="text-xl font-semibold" style={{ color: 'rgba(240,230,211,0.45)' }}>{prayer.time}</span>
@@ -218,8 +218,8 @@ export default function Home() {
                     onClick={handleAttending}
                     className="w-full rounded-xl py-2 mt-3 font-medium"
                     style={userAttending
-                      ? { backgroundColor: '#22404D', color: '#F0E6D3', border: '1px solid #F0E6D3' }
-                      : { backgroundColor: '#F0E6D3', color: '#1A3540' }
+                      ? { backgroundColor: 'rgba(240,230,211,0.12)', color: '#F0E6D3', border: '1px solid rgba(240,230,211,0.4)' }
+                      : { backgroundColor: '#C4956A', color: '#2E2016' }
                     }
                   >
                     {userAttending ? 'Cancel' : 'Attending'}
@@ -240,9 +240,9 @@ export default function Home() {
             }
 
             return (
-              <div key={prayer.name} className="flex justify-between rounded-xl px-4 py-3 mb-2" style={{ backgroundColor: 'rgba(34,64,77,0.82)' }}>
-                <span className="font-medium" style={{ color: '#F0E6D3' }}>{prayer.name}</span>
-                <span style={{ color: 'rgba(240,230,211,0.45)' }}>{prayer.time}</span>
+              <div key={prayer.name} className="flex justify-between rounded-xl px-4 py-3 mb-2" style={{ backgroundColor: '#F0E6D3' }}>
+                <span className="font-medium" style={{ color: '#3D2C1E' }}>{prayer.name}</span>
+                <span style={{ color: '#3D2C1E' }}>{prayer.time}</span>
               </div>
             )
           })}
@@ -259,7 +259,7 @@ export default function Home() {
   // Name entry screen — shown if no name is saved
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-6" style={{ backgroundColor: 'transparent' }}>
-      <div className="rounded-2xl shadow-md p-8 w-full max-w-sm" style={{ backgroundColor: '#22404D' }}>
+      <div className="rounded-2xl shadow-md p-8 w-full max-w-sm" style={{ backgroundColor: '#3D2C1E' }}>
         <h1 className="text-xl font-bold mb-6 text-center" style={{ color: '#F0E6D3' }}>
           Please enter your name
         </h1>
@@ -274,7 +274,7 @@ export default function Home() {
         <button
           onClick={handleSubmit}
           className="w-full rounded-lg px-4 py-3 text-base font-medium"
-          style={{ backgroundColor: '#F0E6D3', color: '#1A3540' }}
+          style={{ backgroundColor: '#F0E6D3', color: '#2E2016' }}
         >
           Continue
         </button>
