@@ -267,7 +267,7 @@ export default function Home() {
   // Name entry screen — shown if no name is saved
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-6" style={{ backgroundColor: 'transparent' }}>
-      <div className="rounded-2xl shadow-md p-8 w-full max-w-sm" style={{ backgroundColor: '#3D2C1E' }}>
+      <div className="rounded-2xl shadow-md p-8 w-full max-w-sm" style={{ backgroundColor: 'rgba(40, 20, 8, 0.85)' }}>
         <h1 className="text-xl font-bold mb-6 text-center" style={{ color: '#F0E6D3' }}>
           Please enter your name
         </h1>
