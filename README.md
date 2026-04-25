@@ -13,14 +13,14 @@ Mariehamns Salawat is a simple, mobile-first web app that centralises prayer coo
 
 ## Screenshots
 
-### Home Screen
-![Home Screen](UI_images/Home_screen.jpeg)
+### First Screen
+![First Screen](UI_images/First_screen.png)
 
 ### Welcoming Screen
 ![Welcoming Screen](UI_images/Welcoming_screen.png)
 
-### First Screen
-![First Screen](UI_images/First_screen.png)
+### Home Screen
+![Home Screen](UI_images/Home_screen.jpeg)
 
 ### Attending & Form Submission
 ![Attending and Form Submission](UI_images/Attending_&_form_submission.jpeg)
