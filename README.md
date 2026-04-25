@@ -63,7 +63,7 @@ Mariehamns Salawat is a simple, mobile-first web app that centralises prayer coo
 Lean Agile + Kanban — [View Board](https://github.com/users/zinebnadak/projects/3)
 
 ## What I Learned
-Skipping authentication for MVP meant thinking carefully about how to identify users without accounts. Storing a name in localStorage and tying it to attendance records was simple but enough for a trusted private group. Supabase realtime just worked. Live updates across devices required surprisingly little code...
+Using API to display accurate prayer-times. Skipping authentication for MVP meant thinking carefully about how to identify users without accounts. Storing a name in localStorage and tying it to attendance records was simple but enough for a trusted private group. Supabase realtime just worked. Live updates across devices required surprisingly little code...
 
 I got really great feedback, so adding a Feedback form is always worth is for small builds like these with real users! :)
 
