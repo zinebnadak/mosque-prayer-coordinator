@@ -8,7 +8,7 @@ What problem does this solve?
 How does it solve it?
 
 ## Live Demo
-[mosque-prayer-coordinator.vercel.app](https://mosque-prayer-coordinator.vercel.app)
+[mosque-prayer-coordinator.vercel.app](https://mariehamns-salawat.vercel.app)
 
 ## Screenshots
 [images]
